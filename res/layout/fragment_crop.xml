@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_marginBottom="4dp"
+    android:layout_width="match_parent"
+    android:background="@color/windowBackground"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+ 
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/done2"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:background="@color/transparentBackground"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_opts_root"
+        android:layout_width="match_parent"
+        android:background="@color/windowBackground"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="@color/transparentBackground"
+                android:padding="4dp"
+                android:text="3:4"
+                android:textColor="@color/text" />
+
+            <Button
+                android:id="@+id/button4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="@color/transparentBackground"
+                android:padding="4dp"
+                android:text="4:3"
+                android:textColor="@color/text" />
+
+            <Button
+                android:id="@+id/button9_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="@color/transparentBackground"
+                android:padding="4dp"
+                android:text="9:16"
+                android:textColor="@color/text" />
+
+            <Button
+                android:id="@+id/button16_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="@color/transparentBackground"
+                android:padding="4dp"
+                android:text="16:9"
+                android:textColor="@color/text" />
+
+            <Button
+                android:id="@+id/buttonFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:background="@color/transparentBackground"
+                android:padding="4dp"
+                android:text="FREE"
+                android:textColor="@color/text" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.nucleussoftware.mobile.cameraapi.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/horizontal_opts_root"
+        android:layout_below="@id/buttonDone"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        custom:scv_background_color="@color/windowBackground"
+        custom:scv_frame_color="@color/colorAccent"
+        custom:scv_frame_stroke_weight="1dp"
+        custom:scv_guide_color="@color/colorAccent"
+        custom:scv_guide_show_mode="show_always"
+        custom:scv_guide_stroke_weight="1dp"
+        custom:scv_handle_color="@color/colorAccent"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_handle_size="14dp"
+        custom:scv_overlay_color="@color/overlay"
+        custom:scv_touch_padding="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+         />
+   
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#A0C6FA</color>
+    <color name="windowBackground">#000000</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <color name="text">#E6EAF0</color>
+    <color name="black">#000000</color>
+    <color name="icon_col">#e5eaf0</color>
+	<color name="transparentBackground">#00000000</color>
+    
+</resources>

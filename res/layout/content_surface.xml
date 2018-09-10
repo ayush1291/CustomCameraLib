@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/surfacevc"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/camera_surface_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/flashView"
+            android:layout_margin="16dp"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/modes_spinner"
+            android:layout_margin="16dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparentBackground"
+            android:popupBackground="@color/transparentBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/pic_mode" />
+
+        <Spinner
+            android:id="@+id/resolution_spinner"
+            android:layout_margin="16dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparentBackground"
+            android:popupBackground="@color/transparentBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/pic_size" />
+
+        <ImageView
+            android:id="@+id/capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_action_camera"
+            android:cropToPadding="true"
+            android:padding="25dp"
+            android:background="@drawable/circle_custom" />
+
+        <com.nucleussoftware.mobile.cameraapi.DrawingView
+            android:id="@+id/drawing_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.nucleussoftware.mobile.cameraapi.DrawingView>
+    </RelativeLayout>
+    
+     <ProgressBar
+        android:id="@+id/progressBar1"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    
+</FrameLayout>

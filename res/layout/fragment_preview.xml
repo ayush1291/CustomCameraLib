@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_preview_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@color/windowBackground">
+
+    <RelativeLayout
+        android:id="@+id/image_preview_rel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <HorizontalScrollView
+            android:id="@+id/edit_opts_hor_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/recapture">
+
+            <LinearLayout
+                android:id="@+id/edit_opts_layout"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="@dimen/action_button_height"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/crop"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/action_text_size_scroller"
+                    android:background="@color/transparentBackground"
+                    android:textColor="@color/icon_col"
+                    android:padding="@dimen/action_button_padding"
+                    android:layout_height="match_parent"
+                    android:text="Crop"
+                    android:src="@drawable/ic_action_cross" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="@dimen/action_div_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/icon_col"
+                    android:layout_toLeftOf="@id/buttonDone" />
+
+                <Button
+                    android:id="@+id/bright"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/action_text_size_scroller"
+                    android:background="@color/transparentBackground"
+                    android:textColor="@color/icon_col"
+                    android:padding="@dimen/action_button_padding"
+                    android:layout_height="match_parent"
+                    android:text="Brightness"
+                    android:src="@drawable/ic_action_cross" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="@dimen/action_div_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/icon_col"
+                    android:layout_toLeftOf="@id/buttonDone" />
+
+                <Button
+                    android:id="@+id/contrast"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/action_text_size_scroller"
+                    android:background="@color/transparentBackground"
+                    android:textColor="@color/icon_col"
+                    android:padding="@dimen/action_button_padding"
+                    android:layout_height="match_parent"
+                    android:text="Contrast"
+                    android:src="@drawable/ic_action_cross" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/rotate"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/action_text_size_scroller"
+            android:background="@color/transparentBackground"
+            android:textColor="@color/icon_col"
+            android:layout_height="@dimen/action_button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="  Rotate"
+            android:drawableLeft="@drawable/ic_action_rotate"
+            android:gravity="center"
+            android:src="@drawable/ic_action_cross" />
+
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rotate"
+            android:layout_above="@id/edit_opts_hor_layout"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@id/recapture"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/action_text_size_scroller"
+            android:background="@color/transparentBackground"
+            android:textColor="@color/icon_col"
+            android:layout_toLeftOf="@id/buttonDone"
+            android:layout_height="@dimen/action_button_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Re-take"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_action_cross" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/action_div_height"
+            android:layout_marginBottom="10dp"
+            android:background="@color/icon_col"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/buttonDone" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/action_text_size_scroller"
+            android:layout_height="@dimen/action_button_height"
+            android:gravity="center"
+            android:text="Done"
+            android:textColor="@color/icon_col"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparentBackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_preview_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@color/windowBackground">
+
+    <RelativeLayout
+        android:id="@+id/image_preview_rel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparentBackground"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="done"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/done2" />
+
+        <Button
+            android:id="@+id/greyscale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grey"
+            android:visibility="gone"
+            android:layout_alignParentRight="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/controls"
+            android:padding="5dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/action_text_size"
+                    android:alpha="0.8"
+                    android:text="Brightness" />
+
+                <SeekBar
+                    android:id="@+id/brightness_bar"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.65"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp" />
+
+                <ImageView
+                    android:id="@+id/reset"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_action_reset"
+                    android:scaleType="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contrast_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bar_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text"
+                    android:alpha="0.8"
+                    android:textSize="@dimen/action_text_size"
+                    android:text="Contrast" />
+
+                <SeekBar
+                    android:id="@+id/contrast_bar"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.65"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp" />
+
+                <ImageView
+                    android:id="@+id/reset_contrast"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_action_reset"
+                    android:scaleType="center" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/buttonDone"
+            android:layout_above="@id/controls"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="4dp"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+</FrameLayout>
